@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="syle.css">
+    <title>momentum</title>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="top_box flex_box">
+
+            <h1 id="greeting" class="greeting hidden"></h1>
+            <div class="form_box">
+                <form id="login-form" class="hidden">
+                    <input required maxlength="15" type="text" placeholder="What your name?">
+                    <input type="submit" value="Log In">
+                </form>
+            </div>
+            <div class="clock_box">
+                <h2 id="clock"></h2>
+            </div>
+
+
+        </div>
+
+
+
+        <div id="quote">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="bgBox"></div>
+
+
+        <form id="todo-form">
+            <input type="text" placeholder="write a to do and press enter">
+        </form>
+        <ul id="todo-list">
+
+        </ul>
+    </div>
+
+
+    <script src="./greeting.js"></script>
+    <script src="./clock.js"></script>
+    <script src="./quotes.js"></script>
+    <script src="./background.js"></script>
+    <script src="./todo.js"></script>
+</body>
+
+</html>

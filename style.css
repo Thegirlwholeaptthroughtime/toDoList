@@ -1,0 +1,14 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.hidden{
+    display: none;
+}
+
+.name{
+    margin: 200px auto 0;
+    width: fit-content;
+}

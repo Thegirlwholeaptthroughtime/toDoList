@@ -1,0 +1,77 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Brush+Script&family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+
+/*
+font-family: 'Gowun Dodum', sans-serif;
+font-family: 'Nanum Brush Script', cursive;
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Oswald', sans-serif;
+*/
+
+
+
+body {}
+
+
+.wrap {
+    height: 100vh;
+
+    position: relative;
+    z-index: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.greeting {
+    margin-left: 30px;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 100px;
+    font-family: 'Oswald', sans-serif;
+
+
+    text-transform: uppercase;
+}
+
+.clock_box{
+    margin-right: 30px;
+}
+
+.top_box {
+
+}
+
+.flex_box {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.form_box {
+    margin-left: 20px;
+}
+
+
+.flex_box h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.quote {
+    position: absolute;
+    bottom: 0;
+}
