@@ -3,7 +3,7 @@
 바닐라스크립트를 이용한 to do list 만들기 
 
 
-1. 로그인 창 구현 (새로고침하여도 리셋x)
+ 로그인 창 구현 (새로고침하여도 리셋x)
 2. 새로 고칠 때마다 바뀌는 명언 / 배경 사진
 3. to do list 작성/삭제 기능
 
@@ -12,3 +12,4 @@
 
 1. form태그 내부에 input태그를 위치
 2. input 태그에 'required', 'maxlength', 'placeholder'를 이용해 기본세팅
+ <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=white"/>
