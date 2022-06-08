@@ -12,4 +12,4 @@
 
 1. form태그 내부에 input태그를 위치
 2. input 태그에 'required', 'maxlength', 'placeholder'를 이용해 기본세팅
- <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=white"/>
+ 
