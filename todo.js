@@ -4,7 +4,7 @@ const toDoList = document.getElementById("todo-list")
 
 const TODOS_KEY = "todos"
 
-const toDos = [];
+let toDos = [];
 //할일목록을 배열로 담음
 
 function saveToDos() {
@@ -15,17 +15,20 @@ function saveToDos() {
 
 function deleteToDo(event) {
     const li = event.target.parentElement;
+
     li.remove();
     //이벤트가 발생한 그 부모를 찍는다
     //밑에도 li가 있지만 지역변수라 ㄱㅊ
-
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id))
+    saveToDos();
 }
 
 
 function paintToDo(newTodo) {
     const li = document.createElement("li")
+    li.id = newTodo.id
     const span = document.createElement("span")
-    span.innerText = newTodo;
+    span.innerText = newTodo.text;
     const button = document.createElement("button")
     button.innerText = "x"
     button.addEventListener("click", deleteToDo)
@@ -38,22 +41,29 @@ function handleToDoSubmit(event) {
     event.preventDefault();
     const newTodo = toDoInput.value;
     toDoInput.value = "";
-    toDos.push(newTodo)
-    paintToDo(newTodo)
+
+    const newTodoObj = {
+        text: newTodo,
+        id: Date.now(),
+        //랜덤한숫자 출력함
+    };
+
+    toDos.push(newTodoObj)
+    paintToDo(newTodoObj)
     //이벤트안에서 새로운 이벤트 발생
     saveToDos();
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit)
 
-function sayHello(item) {
-    console.log('this is turn of', item)
-}
+
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
-console.log(savedToDos)
+
 
 if (savedToDos !== null) {
-    const parsedToDos = JSON.parse(saveToDos)
-    parsedToDos.forEach(sayHello);
+    const parsedToDos = JSON.parse(savedToDos);
+    toDos = parsedToDos;
+    parsedToDos.forEach(paintToDo)
 }
+
